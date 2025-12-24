@@ -1,94 +1,43 @@
-Got it 👍
-Below is **ONE single, continuous, copy-paste-ready README.md file** for your **AutoGMDH** project.
-No breaks, no split, no extra commentary — just **one clean Markdown file**.
+🚀 AutoGMDH
+Automatic Group Method of Data Handling for Self-Organizing Predictive Modeling
 
-You can paste this directly into **README.md** on GitHub.
+AutoGMDH is a fully automated, self-organizing machine learning framework based on the Group Method of Data Handling (GMDH). It is designed to discover optimal polynomial models directly from data with minimal human intervention, making it highly suitable for complex, nonlinear, and noisy systems.
 
----
+Unlike traditional ML models that require manual architecture design, AutoGMDH evolves its own structure, selects features automatically, and prevents overfitting through external validation.
 
-````markdown
-# AutoGMDH 🚀  
-**Automatic Group Method of Data Handling for Self-Organizing Predictive Modeling**
+📌 Key Highlights
 
-AutoGMDH is a fully automated, self-organizing machine learning framework based on the **Group Method of Data Handling (GMDH)**.  
-It is designed to discover optimal polynomial models directly from data with **minimal human intervention**, making it highly suitable for complex, nonlinear, and noisy systems.
+🧠 Self-organizing neural architecture
+📐 Polynomial-based model discovery
+🔍 Automatic feature selection
+🛑 Built-in overfitting control
+⚙️ Interpretable mathematical models
+📈 Strong performance on small and noisy datasets
+🔄 Layer-wise evolutionary optimization
 
-Unlike traditional ML models that require manual architecture design, AutoGMDH **evolves its own structure**, selects features automatically, and prevents overfitting through external validation.
+🧬 What is GMDH?
 
----
+The Group Method of Data Handling (GMDH) is a self-organizing modeling approach introduced by A. G. Ivakhnenko. It builds models in a layered evolutionary manner, generating candidate polynomial neurons and retaining only the best-performing ones.
 
-## 📌 Key Highlights
+AutoGMDH modernizes this idea by introducing an automated pipeline, a scalable implementation, an ML-friendly API, and research-oriented extensibility.
 
-- 🧠 **Self-organizing neural architecture**
-- 📐 **Polynomial-based model discovery**
-- 🔍 **Automatic feature selection**
-- 🛑 **Built-in overfitting control**
-- ⚙️ **Interpretable mathematical models**
-- 📈 **Strong performance on small & noisy datasets**
-- 🔄 **Layer-wise evolutionary optimization**
+🏗️ Architecture Overview
 
----
+AutoGMDH constructs models through a structured pipeline. It begins with an input feature pool, followed by pairwise feature combinations and polynomial neuron generation. These neurons are evaluated using external validation methods such as hold-out validation or cross-validation. The best-performing neurons are selected to form the next layer, and the model expands layer by layer until a stopping criterion based on generalization error is met.
 
-## 🧬 What is GMDH?
+Each layer improves the model until performance stagnates or begins to degrade.
 
-The **Group Method of Data Handling (GMDH)** is a self-organizing modeling approach introduced by **A. G. Ivakhnenko**.  
-It builds models in a **layered evolutionary manner**, generating candidate polynomial neurons and retaining only the best-performing ones.
-
-AutoGMDH modernizes this idea with:
-- Automated pipeline
-- Scalable implementation
-- ML-friendly API
-- Research-oriented extensibility
-
----
-
-## 🏗️ Architecture Overview
-
-AutoGMDH constructs models through the following pipeline:
-
-1. **Input Feature Pool**
-2. **Pairwise Feature Combination**
-3. **Polynomial Neuron Generation**
-4. **External Validation (Hold-out / CV)**
-5. **Best Neuron Selection**
-6. **Layer Expansion**
-7. **Stopping Criterion (Generalization Error)**
-
-Each layer improves the model until performance stagnates or degrades.
-
----
-
-## 🧮 Polynomial Neuron Structure
+🧮 Polynomial Neuron Structure
 
 Each neuron follows a quadratic polynomial form:
 
-\[
-y = a_0 + a_1x_1 + a_2x_2 + a_3x_1^2 + a_4x_2^2 + a_5x_1x_2
-\]
+y = a0 + a1x1 + a2x2 + a3x1² + a4x2² + a5x1x2
 
-Where coefficients are estimated using **least squares regression**.
+The coefficients are estimated using least squares regression.
 
----
+⚙️ Core Algorithm (High-Level)
 
-## ⚙️ Core Algorithm (High-Level)
-
-```text
-Initialize input feature set
-↓
-Generate polynomial neurons from feature pairs
-↓
-Train neurons using training data
-↓
-Evaluate neurons using validation data
-↓
-Select top-performing neurons
-↓
-Form next layer using selected neurons
-↓
-Repeat until validation error increases
-````
-
----
+The process starts by initializing the input feature set. Polynomial neurons are generated from feature pairs and trained using the training data. These neurons are evaluated on validation data, after which the top-performing neurons are selected. The selected neurons form the next layer of the model. This process repeats iteratively until the validation error increases, indicating that further model complexity would reduce generalization performance.
 
 ## 🚀 Features
 
@@ -255,3 +204,4 @@ Inspired by classical GMDH theory and modern automated machine learning (AutoML)
 If you use AutoGMDH in research, please consider citing the project.
 
 ```
+
